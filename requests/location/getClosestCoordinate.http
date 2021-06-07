@@ -1,0 +1,33 @@
+POST {{path}}/location
+Content-Type: application/json
+
+{
+  "coordinateList": [
+    {
+      "x": 4.7501342399421445,
+      "y": -74.09565336843772,
+      "address": "Cra. 104 #148 - 07, Bogotá, Cundinamarca"
+    },
+    {
+      "x": 4.702362865602372,
+      "y": -74.04156321729367,
+      "address": "Cl. 142 #111A-06, Suba, Bogotá"
+    },
+    {
+      "x": 35.36100524652076,
+      "y": 138.72733665437113,
+      "address": "Monte Fuji, Honshu, Japón"
+    },
+    {
+      "x": 51.12975003718817,
+      "y": 71.4223813141149,
+      "address": "Nurzhol Boulevard, Astaná, Kazakhstan"
+    }
+  ],
+  "input": {
+    "x": 4.751649608927578,
+    "y": -74.0970145448742,
+    "address": "Conjunto arboleda del parque"
+  }
+}
+###
