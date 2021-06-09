@@ -1,3 +1,3 @@
 export const ApiUri = {
-    location: 'location'
+  location: 'location',
 };

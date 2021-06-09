@@ -1,3 +1,4 @@
 export const SERVICE = {
-    distance: 'DISTANCE'
-}
+  distance: 'DISTANCE',
+  places: 'PLACES',
+};

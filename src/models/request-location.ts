@@ -1,6 +1,11 @@
-import {Coordinate} from "./coordinate";
+import { Coordinate } from './coordinate';
 
 export class RequestLocation {
-    input: Coordinate;
-    coordinateList: Coordinate[];
+  input: Coordinate;
+  coordinateList: Coordinate[];
+}
+
+export interface AddressRequest {
+  addressList: string[];
+  input?: string;
 }

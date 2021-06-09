@@ -1,5 +1,8 @@
-import {Coordinate} from "../../models/coordinate";
+import { Coordinate } from '../../models/coordinate';
 
 export interface DistanceServiceInterface {
-    getClosest(coordinate: Coordinate, coordinatesList?: Coordinate[]): Coordinate;
+  getClosest(
+    coordinate: Coordinate,
+    coordinatesList?: Coordinate[],
+  ): Coordinate;
 }
