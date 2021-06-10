@@ -58,6 +58,23 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
+# Docker
+
+- For production:
+
+To build docker
+
+`docker build . -t zapacommerce.azurecr.io/seisemtechlocationmicroservicesproject:latest`
+
+To push docker
+
+`docker push zapacommerce.azurecr.io/seisemtechlocationmicroservicesproject:latest`
+
+To test docker locally
+
+`docker run -it -p 80:3000 zapacommerce.azurecr.io/seisemtechlocationmicroservicesproject:latest`
+
+
 ## Support
 
 Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
