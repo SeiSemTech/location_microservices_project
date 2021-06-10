@@ -8,6 +8,6 @@ export class Coordinate {
     this.x = x;
     this.y = y;
     this.address = address;
-    this.distance = distance
+    this.distance = distance;
   }
 }
