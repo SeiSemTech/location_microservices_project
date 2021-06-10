@@ -1,0 +1,670 @@
+POST http://localhost:3000/location
+Content-Type: application/json
+
+{
+  "addressList": [
+      "Cra. 104 #148 - 07, Bogotá, Cundinamarca",
+      "Cl. 142 #111A-06, Suba, Bogotá"
+  ],
+  "input": "Cra 17a # 175-82"
+}
+
+<> 2021-06-10T135918.201.json
+
+###
+
+POST http://localhost:3000/location
+Content-Type: application/json
+
+{
+  "input": "Cra 17a # 175-82"
+}
+
+<> 2021-06-10T135912.201.json
+
+###
+
+POST http://localhost:3000/location
+Content-Type: application/json
+
+{
+  "addressList": [
+      "Cra. 104 #148 - 07, Bogotá, Cundinamarca",
+      "Cl. 142 #111A-06, Suba, Bogotá"
+  ],
+  "input": "Cra 17a # 175-82"
+}
+
+<> 2021-06-10T135756.201.json
+
+###
+
+POST http://localhost:3000/location
+Content-Type: application/json
+
+{
+  "input": "Cra 17a # 175-82"
+}
+
+<> 2021-06-10T135749.502.json
+
+###
+
+POST http://localhost:3000/location
+Content-Type: application/json
+
+{
+  "input": "Cra 17a # 175-82"
+}
+
+<> 2021-06-10T135523.502.json
+
+###
+
+POST http://localhost:3000/location
+Content-Type: application/json
+
+{
+  "addressList": [
+      "Cra. 104 #148 - 07, Bogotá, Cundinamarca",
+      "Cl. 142 #111A-06, Suba, Bogotá"
+  ],
+  "input": "Cra 17a # 175-82"
+}
+
+<> 2021-06-10T135429.201.json
+
+###
+
+POST http://localhost:3000/location/closest-address
+Content-Type: application/json
+
+{
+  "addressList": [
+    {
+      "x": 4.7501342399421445,
+      "y": -74.09565336843772,
+      "address": "Cra. 104 #148 - 07, Bogotá, Cundinamarca"
+    },
+    {
+      "x": 4.702362865602372,
+      "y": -74.04156321729367,
+      "address": "Cl. 142 #111A-06, Suba, Bogotá"
+    },
+    {
+      "x": 35.36100524652076,
+      "y": 138.72733665437113,
+      "address": "Monte Fuji, Honshu, Japón"
+    },
+    {
+      "x": 51.12975003718817,
+      "y": 71.4223813141149,
+      "address": "Nurzhol Boulevard, Astaná, Kazakhstan"
+    }
+  ],
+  "input": {
+    "x": 4.751649608927578,
+    "y": -74.0970145448742,
+    "address": "Conjunto arboleda del parque"
+  }
+}
+
+<> 2021-06-10T135422.201.json
+
+###
+
+POST http://{{path}}/location
+Content-Type: application/json
+
+{
+  "addressList": [
+      "Cra. 104 #148 - 07, Bogotá, Cundinamarca",
+      "Cl. 142 #111A-06, Suba, Bogotá"
+  ],
+  "input": "Cra 17a # 175-82"
+}
+
+###
+
+GET http://localhost:3000/location/only-get-info
+Content-Type: application/json
+Accept: application/json
+
+{
+  "addressList": [
+    "Cra 17a # 175-82"
+  ]
+}
+
+<> 2021-06-10T135241.502.json
+
+###
+
+POST http://localhost:3000/location
+Content-Type: application/json
+
+{
+  "addressList": [
+      "Cra. 104 #148 - 07, Bogotá, Cundinamarca",
+      "Cl. 142 #111A-06, Suba, Bogotá"
+  ],
+  "input": "Cra 17a # 175-82"
+}
+
+<> 2021-06-10T135236.502.json
+
+###
+
+POST http://localhost:3000/location/closest-address
+Content-Type: application/json
+
+{
+  "addressList": [
+    {
+      "x": 4.7501342399421445,
+      "y": -74.09565336843772,
+      "address": "Cra. 104 #148 - 07, Bogotá, Cundinamarca"
+    },
+    {
+      "x": 4.702362865602372,
+      "y": -74.04156321729367,
+      "address": "Cl. 142 #111A-06, Suba, Bogotá"
+    },
+    {
+      "x": 35.36100524652076,
+      "y": 138.72733665437113,
+      "address": "Monte Fuji, Honshu, Japón"
+    },
+    {
+      "x": 51.12975003718817,
+      "y": 71.4223813141149,
+      "address": "Nurzhol Boulevard, Astaná, Kazakhstan"
+    }
+  ],
+  "input": {
+    "x": 4.751649608927578,
+    "y": -74.0970145448742,
+    "address": "Conjunto arboleda del parque"
+  }
+}
+
+<> 2021-06-10T135232.201.json
+
+###
+
+POST http://localhost:3000/location/closest-address
+Content-Type: application/json
+
+{
+  "addressList": [
+    {
+      "x": 4.7501342399421445,
+      "y": -74.09565336843772,
+      "address": "Cra. 104 #148 - 07, Bogotá, Cundinamarca"
+    },
+    {
+      "x": 4.702362865602372,
+      "y": -74.04156321729367,
+      "address": "Cl. 142 #111A-06, Suba, Bogotá"
+    },
+    {
+      "x": 35.36100524652076,
+      "y": 138.72733665437113,
+      "address": "Monte Fuji, Honshu, Japón"
+    },
+    {
+      "x": 51.12975003718817,
+      "y": 71.4223813141149,
+      "address": "Nurzhol Boulevard, Astaná, Kazakhstan"
+    }
+  ],
+  "input": {
+    "x": 4.751649608927578,
+    "y": -74.0970145448742,
+    "address": "Conjunto arboleda del parque"
+  }
+}
+
+<> 2021-06-10T135049.201.json
+
+###
+
+POST http://localhost:3000/location/closest-address
+Content-Type: application/json
+
+{
+  "addressList": [
+    {
+      "x": 4.7501342399421445,
+      "y": -74.09565336843772,
+      "address": "Cra. 104 #148 - 07, Bogotá, Cundinamarca"
+    },
+    {
+      "x": 4.702362865602372,
+      "y": -74.04156321729367,
+      "address": "Cl. 142 #111A-06, Suba, Bogotá"
+    },
+    {
+      "x": 35.36100524652076,
+      "y": 138.72733665437113,
+      "address": "Monte Fuji, Honshu, Japón"
+    },
+    {
+      "x": 51.12975003718817,
+      "y": 71.4223813141149,
+      "address": "Nurzhol Boulevard, Astaná, Kazakhstan"
+    }
+  ],
+  "input": {
+    "x": 4.751649608927578,
+    "y": -74.0970145448742,
+    "address": "Conjunto arboleda del parque"
+  }
+}
+
+<> 2021-06-10T134931.500.json
+
+###
+
+POST http://localhost:3000/location/closest-address
+Content-Type: application/json
+
+{
+  "coordinateList": [
+    {
+      "x": 4.7501342399421445,
+      "y": -74.09565336843772,
+      "address": "Cra. 104 #148 - 07, Bogotá, Cundinamarca"
+    },
+    {
+      "x": 4.702362865602372,
+      "y": -74.04156321729367,
+      "address": "Cl. 142 #111A-06, Suba, Bogotá"
+    },
+    {
+      "x": 35.36100524652076,
+      "y": 138.72733665437113,
+      "address": "Monte Fuji, Honshu, Japón"
+    },
+    {
+      "x": 51.12975003718817,
+      "y": 71.4223813141149,
+      "address": "Nurzhol Boulevard, Astaná, Kazakhstan"
+    }
+  ],
+  "input": {
+    "x": 4.751649608927578,
+    "y": -74.0970145448742,
+    "address": "Conjunto arboleda del parque"
+  }
+}
+
+<> 2021-06-10T134603.201.json
+
+###
+
+GET http://localhost:3000/location
+Content-Type: application/json
+Accept: application/json
+
+{
+  "input": "Cra 17a # 175-82"
+}
+
+<> 2021-06-10T133532.502.json
+
+###
+
+GET http://localhost:3000/location
+Content-Type: application/json
+Accept: application/json
+
+{
+    "addressList": [
+      "Cra 17a # 175-82",
+      "Diag 151 b #136 a 80"
+    ],
+  "input": "Cra 17a # 175-82"
+}
+
+<> 2021-06-10T133439.502.json
+
+###
+
+POST http://localhost:3000/location
+Content-Type: application/json
+
+{
+  "coordinateList": [
+    {
+      "x": 4.7501342399421445,
+      "y": -74.09565336843772,
+      "address": "Cra. 104 #148 - 07, Bogotá, Cundinamarca"
+    },
+    {
+      "x": 4.702362865602372,
+      "y": -74.04156321729367,
+      "address": "Cl. 142 #111A-06, Suba, Bogotá"
+    },
+    {
+      "x": 35.36100524652076,
+      "y": 138.72733665437113,
+      "address": "Monte Fuji, Honshu, Japón"
+    },
+    {
+      "x": 51.12975003718817,
+      "y": 71.4223813141149,
+      "address": "Nurzhol Boulevard, Astaná, Kazakhstan"
+    }
+  ],
+  "input": {
+    "x": 4.751649608927578,
+    "y": -74.0970145448742,
+    "address": "Conjunto arboleda del parque"
+  }
+}
+
+<> 2021-06-10T121230.201.json
+
+###
+
+POST http://localhost:3000/location
+Content-Type: application/json
+
+{
+  "coordinateList": [
+    {
+      "x": 4.7501342399421445,
+      "y": -74.09565336843772,
+      "address": "Cra. 104 #148 - 07, Bogotá, Cundinamarca"
+    },
+    {
+      "x": 4.702362865602372,
+      "y": -74.04156321729367,
+      "address": "Cl. 142 #111A-06, Suba, Bogotá"
+    },
+    {
+      "x": 35.36100524652076,
+      "y": 138.72733665437113,
+      "address": "Monte Fuji, Honshu, Japón"
+    },
+    {
+      "x": 51.12975003718817,
+      "y": 71.4223813141149,
+      "address": "Nurzhol Boulevard, Astaná, Kazakhstan"
+    }
+  ],
+  "input": {
+    "x": 4.751649608927578,
+    "y": -74.0970145448742,
+    "address": "Conjunto arboleda del parque"
+  }
+}
+
+<> 2021-06-10T121148.201.json
+
+###
+
+GET http://localhost:3000/location
+Accept: application/json
+
+{
+    "addressList": [
+        "Cra 17a # 175-82",
+        "Diag 151 b #136 a 80"
+    ]
+}
+
+<> 2021-06-10T121137.502.json
+
+###
+
+POST http://localhost:3000/location
+Content-Type: application/json
+
+{
+  "coordinateList": [
+    {
+      "x": 4.7501342399421445,
+      "y": -74.09565336843772,
+      "address": "Cra. 104 #148 - 07, Bogotá, Cundinamarca"
+    },
+    {
+      "x": 4.702362865602372,
+      "y": -74.04156321729367,
+      "address": "Cl. 142 #111A-06, Suba, Bogotá"
+    },
+    {
+      "x": 35.36100524652076,
+      "y": 138.72733665437113,
+      "address": "Monte Fuji, Honshu, Japón"
+    },
+    {
+      "x": 51.12975003718817,
+      "y": 71.4223813141149,
+      "address": "Nurzhol Boulevard, Astaná, Kazakhstan"
+    }
+  ],
+  "input": {
+    "x": 4.751649608927578,
+    "y": -74.0970145448742,
+    "address": "Conjunto arboleda del parque"
+  }
+}
+
+<> 2021-06-08T223020.201.json
+
+###
+
+POST http://localhost:3000/location
+Content-Type: application/json
+
+{
+  "input": {
+    "x": 4.751649608927578,
+    "y": -74.0970145448742,
+    "address": "Conjunto arboleda del parque"
+  }
+}
+
+<> 2021-06-08T223001.500.json
+
+###
+
+POST http://localhost:3000/location
+Content-Type: application/json
+
+{
+  "coordinateList": [
+    {
+      "x": 4.7501342399421445,
+      "y": -74.09565336843772,
+      "address": "Cra. 104 #148 - 07, Bogotá, Cundinamarca"
+    },
+    {
+      "x": 4.702362865602372,
+      "y": -74.04156321729367,
+      "address": "Cl. 142 #111A-06, Suba, Bogotá"
+    },
+    {
+      "x": 35.36100524652076,
+      "y": 138.72733665437113,
+      "address": "Monte Fuji, Honshu, Japón"
+    },
+    {
+      "x": 51.12975003718817,
+      "y": 71.4223813141149,
+      "address": "Nurzhol Boulevard, Astaná, Kazakhstan"
+    }
+  ],
+  "input": {
+    "x": 4.751649608927578,
+    "y": -74.0970145448742,
+    "address": "Conjunto arboleda del parque"
+  }
+}
+
+<> 2021-06-08T222424.201.json
+
+###
+
+GET http://localhost:3000/location
+Accept: application/json
+
+<> 2021-06-08T222317.200.json
+
+###
+
+GET http://localhost:3000/location
+Accept: application/json
+
+<> 2021-06-08T212819.200.json
+
+###
+
+POST http://localhost:3000/location
+Content-Type: application/json
+
+{
+  "coordinateList": [
+    {
+      "x": 4.7501342399421445,
+      "y": -74.09565336843772,
+      "address": "Cra. 104 #148 - 07, Bogotá, Cundinamarca"
+    },
+    {
+      "x": 4.702362865602372,
+      "y": -74.04156321729367,
+      "address": "Cl. 142 #111A-06, Suba, Bogotá"
+    },
+    {
+      "x": 35.36100524652076,
+      "y": 138.72733665437113,
+      "address": "Monte Fuji, Honshu, Japón"
+    },
+    {
+      "x": 51.12975003718817,
+      "y": 71.4223813141149,
+      "address": "Nurzhol Boulevard, Astaná, Kazakhstan"
+    }
+  ],
+  "input": {
+    "x": 4.751649608927578,
+    "y": -74.0970145448742,
+    "address": "Conjunto arboleda del parque"
+  }
+}
+
+<> 2021-06-07T023322.201.json
+
+###
+
+GET http://localhost:3000/location
+Accept: application/json
+
+<> 2021-06-07T023313.200.json
+
+###
+
+POST http://localhost:3000/location
+Content-Type: application/json
+
+{
+  "coordinateList": [
+    {
+      "x": "4.7501342399421445",
+      "y": "-74.09565336843772",
+      "address": "Cra. 104 #148 - 07, Bogotá, Cundinamarca"
+    },
+    {
+      "x": "4.702362865602372",
+      "y": "-74.04156321729367",
+      "address": "Cl. 142 #111A-06, Suba, Bogotá"
+    },
+    {
+      "x": "35.36100524652076",
+      "y": "138.72733665437113",
+      "address": "Monte Fuji, Honshu, Japón"
+    },
+    {
+      "x": "51.12975003718817",
+      "y": "71.4223813141149",
+      "address": "Nurzhol Boulevard, Astaná, Kazakhstan"
+    }
+  ],
+  "input": {
+    "x": "4.751649608927578",
+    "y": "-74.0970145448742",
+    "address": "Conjunto arboleda del parque"
+  }
+}
+
+<> 2021-06-07T021259.201.json
+
+###
+
+GET http://localhost:3000/location
+Accept: application/json
+
+<> 2021-06-07T021246.200.json
+
+###
+
+GET http://localhost:3000/location
+Accept: application/json
+
+<> 2021-06-07T020053.200.json
+
+###
+
+POST http://localhost:3000/location
+Content-Type: application/json
+
+{
+  "coordinateList": [
+    {
+      "x": "4.7501342399421445",
+      "y": "-74.09565336843772"
+    },
+    {
+      "x": "4.702362865602372",
+      "y": "-74.04156321729367"
+    },
+    {
+      "x": "35.36100524652076",
+      "y": "138.72733665437113"
+    },
+    {
+      "x": "51.12975003718817",
+      "y": "71.4223813141149"
+    }
+  ],
+  "input": {
+    "x": "4.751649608927578",
+    "y": "-74.0970145448742"
+  }
+}
+
+<> 2021-06-07T020038.201.json
+
+###
+
+GET http://localhost:3000/location
+Accept: application/json
+
+<> 2021-06-07T015129.200.json
+
+###
+
+GET http://{{path}}/location
+Accept: application/json
+
+###
+
+GET http://localhost:3000/location
+Accept: application/json
+
+<> 2021-06-07T015111.200.json
+
+###
+

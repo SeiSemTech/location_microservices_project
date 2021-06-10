@@ -1,4 +1,0 @@
-GET {{path}}/location
-Accept: application/json
-
-###

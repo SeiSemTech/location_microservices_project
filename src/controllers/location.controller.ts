@@ -25,54 +25,17 @@ export class LocationController {
   ) {}
 
   // TODO dejo el tipo de return any por mientras tanto
-  @Get()
+  @Get('only-get-info')
   async getClosest(@Body() data: AddressRequest): Promise<LocationResponse> {
     const placesResponse = await this.placesService
-      .getLocationFromDirection(data.addressList)
+      .getLocationFromDirection(data.addressList[0])
       .catch((error) => {
         throw new HttpException(
           'Google is not responding: ' + error.message,
           HttpStatus.BAD_GATEWAY,
         );
       });
-    if (data.addressList.length > 1) {
-      // COVED
-      const miConjunto: Coordinate = new Coordinate(
-        4.751649608927578,
-        -74.0970145448742,
-        'Conjunto arboleda del parque',
-      );
-
-      const plazaImperial: Coordinate = new Coordinate(
-        4.7501342399421445,
-        -74.09565336843772,
-        'Cra. 104 #148 - 07, Bogotá, Cundinamarca',
-      );
-      const uniCentro: Coordinate = new Coordinate(
-        4.702362865602372,
-        -74.04156321729367,
-        'Cl. 142 #111A-06, Suba, Bogotá',
-      );
-      const 富士山: Coordinate = new Coordinate(
-        35.36100524652076,
-        138.72733665437113,
-        'Monte Fuji, Honshu, Japón',
-      );
-      const nurzholBoulevard: Coordinate = new Coordinate(
-        51.12975003718817,
-        71.4223813141149,
-        'Nurzhol Boulevard, Astaná, Kazakhstan',
-      );
-
-      const coordinates: Coordinate[] = [
-        plazaImperial,
-        uniCentro,
-        富士山,
-        nurzholBoulevard,
-      ];
-
-      // return this.areaService.getClosest(miConjunto, coordinates);
-    } else {
+    if (!(data.addressList.length > 1)) {
       // Zapacommerce
       return {
         map: null,
@@ -85,8 +48,29 @@ export class LocationController {
     }
   }
 
-  @Post()
+  @Post('closest-address')
   getClosestCoordinate(@Body() data: RequestLocation): Coordinate {
-    return this.areaService.getClosest(data.input, data.coordinateList);
+    return this.areaService.getClosest(data.input, data.addressList);
+  }
+
+  @Post()
+  async getAddressInfo(@Body() data: AddressRequest): Promise<LocationResponse> {
+    try {
+      const input: Coordinate = await this.placesService.getLocationFromDirection(data.input);
+      if (data.addressList) {
+        const coordinates: Coordinate[] =
+            await Promise.all(data.addressList.map(async address =>
+                await this.placesService.getLocationFromDirection(address)));
+
+        const{ x, y, address, distance} = this.areaService.getClosest(input, coordinates);
+
+        // Heiner aquí tu parte para el mapa
+        return new LocationResponse( null, false, x, y, address, distance);
+      } else {
+        return new LocationResponse(null,!input?.x && !input?.y, input?.x, input?.y, input?.address,0);
+      }
+    } catch(error) {
+      throw new HttpException('Google is not responding: ' + error.message, HttpStatus.BAD_GATEWAY );
+    }
   }
 }

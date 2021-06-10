@@ -1,0 +1,18 @@
+POST {{path}}/location
+Content-Type: application/json
+
+{
+  "addressList": [
+      "Cra. 104 #148 - 07, Bogotá, Cundinamarca",
+      "Cl. 142 #111A-06, Suba, Bogotá"
+  ],
+  "input": "Cra 17a # 175-82"
+}
+###
+
+POST {{path}}/location
+Content-Type: application/json
+
+{
+  "input": "Cra 17a # 175-82"
+}

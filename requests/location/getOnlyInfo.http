@@ -1,0 +1,10 @@
+GET {{path}}/location/only-get-info
+Content-Type: application/json
+Accept: application/json
+
+{
+  "addressList": [
+    "Cra 17a # 175-82"
+  ]
+}
+###

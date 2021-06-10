@@ -1,8 +1,8 @@
-POST {{path}}/location
+POST {{path}}/location/closest-address
 Content-Type: application/json
 
 {
-  "coordinateList": [
+  "addressList": [
     {
       "x": 4.7501342399421445,
       "y": -74.09565336843772,

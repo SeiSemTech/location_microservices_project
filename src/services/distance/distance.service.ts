@@ -12,8 +12,7 @@ import {
 @Injectable()
 export class DistanceService implements DistanceServiceInterface {
   getClosest(input: Coordinate, coordinatesList?: Coordinate[]): Coordinate {
-    const reduceClosest = (previous, current) =>
-      previous.distance < current.distance ? previous : current;
+    const reduceClosest = (prev, current) => prev.distance < current.distance ? prev : current;
     return coordinatesList
       .map((c) => ({ ...c, distance: this.getDistance(input, c) }))
       .reduce(reduceClosest);
