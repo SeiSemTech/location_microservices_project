@@ -24,7 +24,6 @@ export class LocationController {
     private readonly placesService: PlacesService,
   ) {}
 
-  // TODO dejo el tipo de return any por mientras tanto
   @Get('only-get-info')
   async getClosest(@Body() data: AddressRequest): Promise<LocationResponse> {
     const placesResponse = await this.placesService
@@ -36,7 +35,6 @@ export class LocationController {
         );
       });
     if (!(data.addressList.length > 1)) {
-      // Zapacommerce
       return {
         map: null,
         error: !placesResponse[0]?.x && !placesResponse[0]?.y,
@@ -57,7 +55,7 @@ export class LocationController {
   async getAddressInfo(@Body() data: AddressRequest): Promise<LocationResponse> {
     try {
       const input: Coordinate = await this.placesService.getLocationFromDirection(data.input);
-      if (data.addressList) {
+      if (data.addressList) { //Covid project
         const coordinates: Coordinate[] =
             await Promise.all(data.addressList.map(async address =>
                 await this.placesService.getLocationFromDirection(address)));
@@ -66,9 +64,10 @@ export class LocationController {
 
         // Heiner aquí tu parte para el mapa
         return new LocationResponse( null, false, x, y, address, distance);
-      } else {
+      } else { //Zapa-commerce
         return new LocationResponse(null,!input?.x && !input?.y, input?.x, input?.y, input?.address,0);
       }
+
     } catch(error) {
       throw new HttpException('Google is not responding: ' + error.message, HttpStatus.BAD_GATEWAY );
     }

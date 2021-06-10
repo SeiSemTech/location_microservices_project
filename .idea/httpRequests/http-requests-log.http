@@ -9,6 +9,121 @@ Content-Type: application/json
   "input": "Cra 17a # 175-82"
 }
 
+<> 2021-06-10T140430.201.json
+
+###
+
+POST http://localhost:3000/location
+Content-Type: application/json
+
+{
+  "input": "Cra 17a # 175-82"
+}
+
+<> 2021-06-10T140424.201.json
+
+###
+
+POST http://localhost:3000/location
+Content-Type: application/json
+
+{
+  "addressList": [
+      "Cra. 104 #148 - 07, Bogotá, Cundinamarca",
+      "Cl. 142 #111A-06, Suba, Bogotá"
+  ],
+  "input": "Cra 17a # 175-82"
+}
+
+<> 2021-06-10T140420.201.json
+
+###
+
+POST http://localhost:3000/location
+Content-Type: application/json
+
+{
+  "input": "Cra 17a # 175-82"
+}
+
+<> 2021-06-10T140411.201.json
+
+###
+
+POST http://localhost:3000/location
+Content-Type: application/json
+
+{
+  "addressList": [
+      "Cra. 104 #148 - 07, Bogotá, Cundinamarca",
+      "Cl. 142 #111A-06, Suba, Bogotá"
+  ],
+  "input": "Cra 17a # 175-82"
+}
+
+<> 2021-06-10T140404.201.json
+
+###
+
+POST http://localhost:3000/location
+Content-Type: application/json
+
+{
+  "input": "Cra 17a # 175-82"
+}
+
+<> 2021-06-10T140353-1.201.json
+
+###
+
+POST http://localhost:3000/location
+Content-Type: application/json
+
+{
+  "addressList": [
+      "Cra. 104 #148 - 07, Bogotá, Cundinamarca",
+      "Cl. 142 #111A-06, Suba, Bogotá"
+  ],
+  "input": "Cra 17a # 175-82"
+}
+
+<> 2021-06-10T140353.201.json
+
+###
+
+POST http://{{path}}/location
+Content-Type: application/json
+
+{
+  "input": "Cra 17a # 175-82"
+}
+
+###
+
+POST http://{{path}}/location
+Content-Type: application/json
+
+{
+  "addressList": [
+      "Cra. 104 #148 - 07, Bogotá, Cundinamarca",
+      "Cl. 142 #111A-06, Suba, Bogotá"
+  ],
+  "input": "Cra 17a # 175-82"
+}
+
+###
+
+POST http://localhost:3000/location
+Content-Type: application/json
+
+{
+  "addressList": [
+      "Cra. 104 #148 - 07, Bogotá, Cundinamarca",
+      "Cl. 142 #111A-06, Suba, Bogotá"
+  ],
+  "input": "Cra 17a # 175-82"
+}
+
 <> 2021-06-10T135918.201.json
 
 ###
