@@ -14,6 +14,7 @@ import { ApiUri } from '../constants/api.constants';
 import { AddressRequest, RequestLocation } from '../models/request-location';
 import { PlacesService } from 'src/services/places/places.service';
 import { LocationResponse } from 'src/models/response-location';
+import { MapaService } from 'src/services/mapa/mapa.service';
 
 @Controller(ApiUri.location)
 export class LocationController {
@@ -22,6 +23,8 @@ export class LocationController {
     private readonly areaService: DistanceServiceInterface,
     @Inject(SERVICE.places)
     private readonly placesService: PlacesService,
+    private renderService: MapaService,
+
   ) {}
 
   // TODO dejo el tipo de return any por mientras tanto
@@ -88,5 +91,10 @@ export class LocationController {
   @Post()
   getClosestCoordinate(@Body() data: RequestLocation): Coordinate {
     return this.areaService.getClosest(data.input, data.coordinateList);
+  }
+
+  @Get('mapa')
+  getrender(){
+    console.log(this.renderService.loadMap());    
   }
 }
