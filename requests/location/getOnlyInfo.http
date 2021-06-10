@@ -3,7 +3,7 @@ Content-Type: application/json
 Accept: application/json
 
 {
-  "addressList": [
+  "input": [
     "Cra 17a # 175-82"
   ]
 }
