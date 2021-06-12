@@ -1,19 +1,12 @@
 import { Injectable } from '@nestjs/common';
 import { DistanceServiceInterface } from './distance.service.interface';
 import { Coordinate } from '../../models/coordinate';
-import {
-  EARTH,
-  ONE,
-  RADIAN,
-  THOUSAND,
-  TWO,
-} from '../../constants/data.constants';
+import { EARTH, ONE, RADIAN, THOUSAND, TWO } from '../../constants/data.constants';
 
 @Injectable()
 export class DistanceService implements DistanceServiceInterface {
   getClosest(input: Coordinate, coordinatesList?: Coordinate[]): Coordinate {
-    const reduceClosest = (prev, current) =>
-      prev.distance < current.distance ? prev : current;
+    const reduceClosest = (prev, current) => (prev.distance < current.distance ? prev : current);
     return coordinatesList
       .map((c) => ({ ...c, distance: this.getDistance(input, c) }))
       .reduce(reduceClosest);
@@ -25,11 +18,8 @@ export class DistanceService implements DistanceServiceInterface {
     const distanceSquaredSin = (c: Coordinate, axis: 'x' | 'y') =>
       Math.pow(Math.sin((toRad(c[axis]) - toRad(i[axis])) / TWO), TWO);
     const a = (c: Coordinate) =>
-      distanceSquaredSin(c, 'x') +
-      Math.cos(i.x) * Math.cos(c.x) * distanceSquaredSin(c, 'y');
+      distanceSquaredSin(c, 'x') + Math.cos(i.x) * Math.cos(c.x) * distanceSquaredSin(c, 'y');
 
-    return Math.trunc(
-      EARTH * (TWO * Math.asin(Math.min(ONE, Math.sqrt(a(c))))) * THOUSAND,
-    );
+    return Math.trunc(EARTH * (TWO * Math.asin(Math.min(ONE, Math.sqrt(a(c))))) * THOUSAND);
   }
 }

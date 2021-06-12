@@ -13,7 +13,7 @@ export class PlacesService implements PlacesServiceInterface {
     this.client = new Client({});
   }
 
-  async getLocationFromDirection(direction: string): Promise<Coordinate> {
+  async getAddressLocation(direction: string): Promise<Coordinate> {
     const coordinate: Coordinate = new Coordinate();
     const request: FindPlaceFromTextRequest = {
       params: {

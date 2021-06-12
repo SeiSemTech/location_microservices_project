@@ -1,4 +1,5 @@
 import { Coordinate } from './coordinate';
+import { Address } from './address';
 
 export class RequestLocation {
   input: Coordinate;
@@ -6,6 +7,6 @@ export class RequestLocation {
 }
 
 export interface AddressRequest {
-  addressList: string[];
+  addressList: Address[];
   input: string;
 }

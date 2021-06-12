@@ -1,20 +1,12 @@
 import { Coordinate } from './coordinate';
 
 export class LocationResponse extends Coordinate {
-  map: string;
+  id: string;
   error: boolean;
 
-  constructor(
-    map: string,
-    error: boolean,
-    x: number,
-    y: number,
-    address: string,
-    distance: number,
-  ) {
+  constructor(id: string, error: boolean, x: number, y: number, address: string, distance) {
     super(x, y, address, distance);
-    this.map = map;
+    this.id = id;
     this.error = error;
-    this.distance = distance;
   }
 }
