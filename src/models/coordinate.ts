@@ -1,6 +1,6 @@
 export class Coordinate {
-  x = 0;
-  y = 0;
+  x = undefined;
+  y = undefined;
   address?: string;
   distance?: number;
   id: string;

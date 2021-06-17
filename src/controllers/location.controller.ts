@@ -42,7 +42,7 @@ export class LocationController {
     try {
       this.loggerService.log(`Obteniendo ${data.input}`);
       const input: Coordinate = await this.placesService.getAddressLocation(data.input);
-      if (data.addressList) {
+      if (data.addressList && input?.x && input?.y) {
         //Covid project
         this.loggerService.log(`Obteniendo ${JSON.stringify(data.addressList)}`);
         const coordinates: Coordinate[] = await Promise.all(
@@ -52,7 +52,8 @@ export class LocationController {
           })),
         );
         this.loggerService.log(`Resolviendo ${JSON.stringify(coordinates)}`);
-        return { error: false, ...this.areaService.getClosest(input, coordinates) };
+        const closestPlace = this.areaService.getClosest(input, coordinates);
+        return { error: !closestPlace.distance , ...closestPlace };
       } else {
         //Zapa-commerce
         return { error: !input?.x && !input?.y, ...input };

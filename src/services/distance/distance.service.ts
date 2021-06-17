@@ -5,11 +5,11 @@ import { EARTH, ONE, RADIAN, THOUSAND, TWO } from '../../constants/data.constant
 
 @Injectable()
 export class DistanceService implements DistanceServiceInterface {
-  getClosest(input: Coordinate, coordinatesList?: Coordinate[]): Coordinate {
+  getClosest(input: Coordinate, coordinatesList: Coordinate[]): Coordinate {
     const reduceClosest = (prev, current) => (prev.distance < current.distance ? prev : current);
     return coordinatesList
-      .map((c) => ({ ...c, distance: this.getDistance(input, c) }))
-      .reduce(reduceClosest);
+      .map((c) => ({ ...c, distance: this.getDistance(input, c) })).filter(c => !!c.distance)
+      .reduce(reduceClosest, new Coordinate());
   }
 
   getDistance(i: Coordinate, c: Coordinate) {
